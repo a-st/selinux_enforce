@@ -13,12 +13,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set environment
+      run: echo "ZIP=selinux_enforce-$(git rev-parse --short $GITHUB_SHA).zip" >> "$GITHUB_ENV"
 
     - name: Create zip
-      run: zip -r9 selinux_enforce-$(git rev-parse --short "$GITHUB_SHA").zip . -x selinux_enforce-*.zip LICENSE .gitignore .gitattributes Makefile /.git*
+      run: zip -r9 $ZIP . -x selinux_enforce-*.zip LICENSE .gitignore .gitattributes Makefile /.git*
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: selinux_enforce-$(git rev-parse --short "$GITHUB_SHA").zip
-        path: selinux_enforce-$(git rev-parse --short "$GITHUB_SHA").zip
+        name: $ZIP
+        path: $ZIP
