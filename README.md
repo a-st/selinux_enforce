@@ -12,15 +12,15 @@ e.g., stock samsung kernels.
 
 Stable release:
 1. Dowload latest selinux_enforce.zip from releases page
-   https://github.com/evdenis/selinux_enforce/releases
+   https://github.com/a-st/selinux_enforce/releases
 2. MagiskManager -> Modules + Downloads/selinux_enforce.zip -> Reboot
 
 Master branch:
-1. git clone https://github.com/evdenis/selinux_enforce
+1. git clone https://github.com/a-st/selinux_enforce
 2. cd selinux_enforce
 3. make install
 
 ## Support
 
-- [Telegram](https://t.me/joinchat/GsJfBBaxozXvVkSJhm0IOQ)
-- [XDA Thread](https://forum.xda-developers.com/apps/magisk/module-debugging-modules-adb-root-t4050041)
+- [Matrix](@a-st:matrix.org)
+- [GitHub](https://github.com/a-st)
